@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Load Database{% endblock %}
+
+{% block body %}
+    {% if tables %}
+        {% for elem in tables %}
+
+            <tr>
+                <td>{{ elem.name }}</td>
+            </tr>
+
+        {% endfor %}
+    {% else %}
+        There is no any tables
+    {% endif %}
+
+{% endblock %}
+
+
